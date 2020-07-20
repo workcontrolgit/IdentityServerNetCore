@@ -1,0 +1,15 @@
+{
+	"ConnectionStrings": {
+		"DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=IdentityServerQuickstart.NetCore3.1;Trusted_Connection=True;MultipleActiveResultSets=true"
+	}
+}
+
+Add-Migration InitialPersistedGrantDbMigration -c PersistedGrantDbContext -o Data/Migrations/IdentityServer/PersistedGrantDb
+Add-Migration InitialConfigurationDbMigration -c IdentityServer.Data.ConfigurationDbContext -o Data/Migrations/IdentityServer/ConfigurationDb
+
+
+Update-Database -Context PersistedGrantDbContext
+Update-Database -Context IdentityServer.Data.ConfigurationDbContext
+
+
+Add-Migration InitialIdentityDbMigration -c IdentityDbContext -o Data/Migrations/AspNetIdentity/AspNetIdentityDb

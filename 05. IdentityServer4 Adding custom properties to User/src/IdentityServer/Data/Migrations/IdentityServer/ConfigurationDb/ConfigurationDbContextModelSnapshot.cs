@@ -65,7 +65,7 @@ namespace IdentityServer.Data.Migrations.IdentityServer.ConfigurationDb
                         new
                         {
                             Id = 1,
-                            Created = new DateTime(2020, 1, 27, 9, 42, 1, 590, DateTimeKind.Utc).AddTicks(2313),
+                            Created = new DateTime(2020, 7, 19, 4, 11, 0, 54, DateTimeKind.Utc).AddTicks(8368),
                             DisplayName = "My Web API",
                             Enabled = true,
                             Name = "web_api",
@@ -402,7 +402,7 @@ namespace IdentityServer.Data.Migrations.IdentityServer.ConfigurationDb
                             BackChannelLogoutSessionRequired = true,
                             ClientClaimsPrefix = "client_",
                             ClientId = "client",
-                            Created = new DateTime(2020, 1, 27, 9, 42, 1, 592, DateTimeKind.Utc).AddTicks(714),
+                            Created = new DateTime(2020, 7, 19, 4, 11, 0, 56, DateTimeKind.Utc).AddTicks(3333),
                             DeviceCodeLifetime = 300,
                             EnableLocalLogin = true,
                             Enabled = true,
@@ -435,7 +435,7 @@ namespace IdentityServer.Data.Migrations.IdentityServer.ConfigurationDb
                             BackChannelLogoutSessionRequired = true,
                             ClientClaimsPrefix = "client_",
                             ClientId = "ro.client",
-                            Created = new DateTime(2020, 1, 27, 9, 42, 1, 592, DateTimeKind.Utc).AddTicks(4022),
+                            Created = new DateTime(2020, 7, 19, 4, 11, 0, 56, DateTimeKind.Utc).AddTicks(5637),
                             DeviceCodeLifetime = 300,
                             EnableLocalLogin = true,
                             Enabled = true,
@@ -469,7 +469,7 @@ namespace IdentityServer.Data.Migrations.IdentityServer.ConfigurationDb
                             ClientClaimsPrefix = "client_",
                             ClientId = "mvc",
                             ClientName = "MVC Client",
-                            Created = new DateTime(2020, 1, 27, 9, 42, 1, 592, DateTimeKind.Utc).AddTicks(4026),
+                            Created = new DateTime(2020, 7, 19, 4, 11, 0, 56, DateTimeKind.Utc).AddTicks(5642),
                             DeviceCodeLifetime = 300,
                             EnableLocalLogin = true,
                             Enabled = true,
@@ -503,7 +503,7 @@ namespace IdentityServer.Data.Migrations.IdentityServer.ConfigurationDb
                             ClientClaimsPrefix = "client_",
                             ClientId = "js",
                             ClientName = "JavaScript client",
-                            Created = new DateTime(2020, 1, 27, 9, 42, 1, 592, DateTimeKind.Utc).AddTicks(4028),
+                            Created = new DateTime(2020, 7, 19, 4, 11, 0, 56, DateTimeKind.Utc).AddTicks(5644),
                             DeviceCodeLifetime = 300,
                             EnableLocalLogin = true,
                             Enabled = true,
@@ -861,7 +861,7 @@ namespace IdentityServer.Data.Migrations.IdentityServer.ConfigurationDb
                         {
                             Id = 1,
                             ClientId = 1,
-                            Created = new DateTime(2020, 1, 27, 9, 42, 1, 592, DateTimeKind.Utc).AddTicks(7212),
+                            Created = new DateTime(2020, 7, 19, 4, 11, 0, 56, DateTimeKind.Utc).AddTicks(7984),
                             Type = "SharedSecret",
                             Value = "K7gNU3sdo+OL0wNhqoVWhr3g6s1xYv72ol/pe/Unols="
                         },
@@ -869,7 +869,7 @@ namespace IdentityServer.Data.Migrations.IdentityServer.ConfigurationDb
                         {
                             Id = 2,
                             ClientId = 2,
-                            Created = new DateTime(2020, 1, 27, 9, 42, 1, 594, DateTimeKind.Utc).AddTicks(6993),
+                            Created = new DateTime(2020, 7, 19, 4, 11, 0, 58, DateTimeKind.Utc).AddTicks(7012),
                             Type = "SharedSecret",
                             Value = "K7gNU3sdo+OL0wNhqoVWhr3g6s1xYv72ol/pe/Unols="
                         },
@@ -877,7 +877,7 @@ namespace IdentityServer.Data.Migrations.IdentityServer.ConfigurationDb
                         {
                             Id = 3,
                             ClientId = 3,
-                            Created = new DateTime(2020, 1, 27, 9, 42, 1, 594, DateTimeKind.Utc).AddTicks(7257),
+                            Created = new DateTime(2020, 7, 19, 4, 11, 0, 58, DateTimeKind.Utc).AddTicks(7235),
                             Type = "SharedSecret",
                             Value = "K7gNU3sdo+OL0wNhqoVWhr3g6s1xYv72ol/pe/Unols="
                         });
@@ -995,7 +995,7 @@ namespace IdentityServer.Data.Migrations.IdentityServer.ConfigurationDb
                         new
                         {
                             Id = 1,
-                            Created = new DateTime(2020, 1, 27, 9, 42, 1, 591, DateTimeKind.Utc).AddTicks(7490),
+                            Created = new DateTime(2020, 7, 19, 4, 11, 0, 56, DateTimeKind.Utc).AddTicks(871),
                             DisplayName = "Your user identifier",
                             Emphasize = false,
                             Enabled = true,
@@ -1007,7 +1007,7 @@ namespace IdentityServer.Data.Migrations.IdentityServer.ConfigurationDb
                         new
                         {
                             Id = 2,
-                            Created = new DateTime(2020, 1, 27, 9, 42, 1, 591, DateTimeKind.Utc).AddTicks(8400),
+                            Created = new DateTime(2020, 7, 19, 4, 11, 0, 56, DateTimeKind.Utc).AddTicks(1515),
                             Description = "Your user profile information (first name, last name, etc.)",
                             DisplayName = "User profile",
                             Emphasize = true,

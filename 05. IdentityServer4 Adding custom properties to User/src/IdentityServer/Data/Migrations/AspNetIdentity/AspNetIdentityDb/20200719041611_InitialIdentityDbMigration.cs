@@ -39,7 +39,9 @@ namespace IdentityServer.Data.Migrations.AspNetIdentity.AspNetIdentityDb
                     TwoFactorEnabled = table.Column<bool>(nullable: false),
                     LockoutEnd = table.Column<DateTimeOffset>(nullable: true),
                     LockoutEnabled = table.Column<bool>(nullable: false),
-                    AccessFailedCount = table.Column<int>(nullable: false)
+                    AccessFailedCount = table.Column<int>(nullable: false),
+                    IsEnabled = table.Column<bool>(nullable: false),
+                    EmployeeId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -150,6 +152,38 @@ namespace IdentityServer.Data.Migrations.AspNetIdentity.AspNetIdentityDb
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.InsertData(
+                table: "AspNetUsers",
+                columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "EmployeeId", "IsEnabled", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
+                values: new object[] { "1", 0, "7614e1e6-cbfb-4e49-b768-24b96deded72", "AliceSmith@email.com", true, null, false, false, null, "ALICESMITH@EMAIL.COM", "ALICE", "AQAAAAEAACcQAAAAEGB2v0BLwx+LehJYjPuIGqvDu4juq1z9dEaXiaNHW5SVvgjI6xBYQM5WpildsPMYpg==", null, false, "d7d8ca5a-8840-430c-8dd2-003fc27999a7", false, "alice" });
+
+            migrationBuilder.InsertData(
+                table: "AspNetUsers",
+                columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "EmployeeId", "IsEnabled", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
+                values: new object[] { "2", 0, "b860de52-bf3b-4593-a9bd-ba70933c681c", "BobSmith@email.com", true, null, false, false, null, "BOBSMITH@EMAIL.COM", "BOB", "AQAAAAEAACcQAAAAEPCvABxb4I2dXAcDl1/rh17xK+vvIbZ8RqfQGG/5wW7x98ffwF8BOy9EJmyBVXy3NA==", null, false, "5098efd3-456e-42e1-a7fc-f0ddf423d11a", false, "bob" });
+
+            migrationBuilder.InsertData(
+                table: "AspNetUserClaims",
+                columns: new[] { "Id", "ClaimType", "ClaimValue", "UserId" },
+                values: new object[,]
+                {
+                    { 1, "name", "Alice Smith", "1" },
+                    { 2, "given_name", "Alice", "1" },
+                    { 3, "family_name", "Smith", "1" },
+                    { 4, "email", "AliceSmith@email.com", "1" },
+                    { 5, "website", "http://alice.com", "1" },
+                    { 11, "email_verified", "True", "1" },
+                    { 13, "address", "{ 'street_address': 'One Hacker Way', 'locality': 'Heidelberg', 'postal_code': 69118, 'country': 'Germany' }", "1" },
+                    { 15, "location", "somewhere", "1" },
+                    { 6, "name", "Bob Smith", "2" },
+                    { 7, "given_name", "Bob", "2" },
+                    { 8, "family_name", "Smith", "2" },
+                    { 9, "email", "BobSmith@email.com", "2" },
+                    { 10, "website", "http://bob.com", "2" },
+                    { 12, "email_verified", "True", "2" },
+                    { 14, "address", "{ 'street_address': 'One Hacker Way', 'locality': 'Heidelberg', 'postal_code': 69118, 'country': 'Germany' }", "2" }
                 });
 
             migrationBuilder.CreateIndex(

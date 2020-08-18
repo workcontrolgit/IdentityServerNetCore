@@ -148,7 +148,7 @@ namespace IdentityServer.Data
                     {
                         Id = 13,
                         UserId = "1",
-                        ClaimType = "address",
+                        ClaimType = JwtClaimTypes.Address,
                         ClaimValue = @"{ 'street_address': 'One Hacker Way', 'locality': 'Heidelberg', 'postal_code': 69118, 'country': 'Germany' }"
                     },
                     new IdentityUserClaim<string>

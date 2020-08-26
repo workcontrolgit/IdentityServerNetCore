@@ -18,6 +18,8 @@ using IdentityServer4.Services;
 using IdentityServer.Services;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using System.Threading.Tasks;
+using Microsoft.IdentityModel.Logging;
+using System.Net;
 
 namespace IdentityServer
 {
@@ -38,6 +40,10 @@ namespace IdentityServer
 
             // uncomment, if you want to add an MVC-based UI
             services.AddControllersWithViews();
+
+            IdentityModelEventSource.ShowPII = true;
+
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 
             services.AddDbContext<IdentityDbContext>(options => options.UseSqlServer(connectionString, sql => sql.MigrationsAssembly(migrationsAssembly)));
             services.AddDbContext<Data.ConfigurationDbContext>(options => options.UseSqlServer(connectionString, sql => sql.MigrationsAssembly(migrationsAssembly)));

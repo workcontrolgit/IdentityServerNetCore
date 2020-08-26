@@ -47,26 +47,6 @@ namespace IdentityServer
                 .AddEntityFrameworkStores<IdentityDbContext>()
                 .AddDefaultTokenProviders();
 
-            services.AddAuthentication()
-                .AddOpenIdConnect("azuread", "Azure AD", options => Configuration.Bind("AzureAd", options));
-
-            services.Configure<OpenIdConnectOptions>("azuread", options =>
-            {
-                options.Scope.Add("openid");
-                options.Scope.Add("profile");
-                options.Events = new OpenIdConnectEvents()
-                {
-                    OnRedirectToIdentityProviderForSignOut = context =>
-                    {
-                        context.HandleResponse();
-                        context.Response.Redirect("/Account/Logout");
-                        return Task.FromResult(0);
-                    }
-                };
-            });
-
-
-
             var builder = services.AddIdentityServer(options =>
             {
                 options.Events.RaiseErrorEvents = true;
